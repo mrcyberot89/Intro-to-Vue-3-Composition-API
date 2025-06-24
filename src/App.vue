@@ -14,6 +14,9 @@ const variants = ref([
 ])
 
 const cart = ref(0)
+//tambah cart
+const addCart = () => cart.value += 1
+
 </script>
   
 <template>
@@ -37,7 +40,7 @@ const cart = ref(0)
         >
           {{ variant.color }}
         </div>
-        <button class="button">Add to Cart</button>
+        <button class="button" @click="addCart">Add to Cart</button>
       </div>
     </div>
   </div>
